@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>E-Summit '26 - IIT Tirupati</title>
+<title>About E-Summit '26 - IIT Tirupati</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -88,6 +88,20 @@
             background-size: 50px 50px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
                               linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }.custom-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .custom-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 8px;
+            height: 8px;
+            background-color: #A855F7;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
         }
     </style>
 </head>
@@ -103,11 +117,11 @@
 </div>
 <div class="hidden md:block">
 <div class="ml-10 flex items-baseline space-x-8">
-<a class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Home</a>
-<a class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/about">About</a>
+<a class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/">Home</a>
+<a class="text-primary bg-primary/10 px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">About</a>
 <a class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Speakers</a>
 <a class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/events">Events</a>
-<a class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/contact">Contact</a>
+<a class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/contacts">Contact</a>
 </div>
 </div>
 <div class="hidden md:block">
@@ -126,106 +140,105 @@
 </div>
 </div>
 </nav>
-<main class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-<div class="absolute inset-0 bg-grid pointer-events-none opacity-30"></div>
-<div class="absolute inset-0 bg-hero-gradient pointer-events-none"></div>
-<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40 animate-pulse-slow" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialGradient cx="50%" cy="50%" fx="50%" fy="50%" id="grad1" r="50%">
-<stop offset="0%" style="stop-color:rgb(168, 85, 247);stop-opacity:0.2"></stop>
-<stop offset="100%" style="stop-color:rgb(5, 5, 7);stop-opacity:0"></stop>
-</radialGradient>
-</defs>
-<g class="text-gray-600" stroke="currentColor" stroke-width="0.5">
-<line x1="10%" x2="30%" y1="20%" y2="40%"></line>
-<line x1="30%" x2="20%" y1="40%" y2="70%"></line>
-<line x1="20%" x2="50%" y1="70%" y2="80%"></line>
-<line x1="70%" x2="80%" y1="20%" y2="50%"></line>
-<line x1="80%" x2="60%" y1="50%" y2="60%"></line>
-<circle cx="10%" cy="20%" fill="currentColor" r="2"></circle>
-<circle cx="30%" cy="40%" fill="currentColor" r="2"></circle>
-<circle cx="20%" cy="70%" fill="currentColor" r="2"></circle>
-<circle cx="50%" cy="80%" fill="currentColor" r="2"></circle>
-<circle cx="70%" cy="20%" fill="currentColor" r="2"></circle>
-<circle cx="80%" cy="50%" fill="currentColor" r="2"></circle>
-<circle cx="60%" cy="60%" fill="currentColor" r="2"></circle>
-</g>
-</svg>
-<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-<div class="flex flex-col md:flex-row items-center justify-center md:space-x-12 lg:space-x-20">
-<div class="mb-10 md:mb-0 transform hover:scale-105 transition-transform duration-500 animate-float">
-<svg class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient id="logoGradient" x1="0%" x2="100%" y1="0%" y2="100%">
-<stop offset="0%" style="stop-color:#d8b4fe;stop-opacity:1"></stop>
-<stop offset="100%" style="stop-color:#7e22ce;stop-opacity:1"></stop>
-</linearGradient>
-</defs>
-<path d="M100 20 C110 60 140 80 180 90 C140 100 110 120 100 160 C90 120 60 100 20 90 C60 80 90 60 100 20 Z" fill="none" stroke="url(#logoGradient)" stroke-width="4"></path>
-<path d="M100 50 L125 100 L100 130 L75 100 Z" fill="url(#logoGradient)"></path>
-<path d="M100 10 L115 70 L170 85 L120 105 L135 160 L100 130 L65 160 L80 105 L30 85 L85 70 Z" fill="none" opacity="0.5" stroke="#A855F7" stroke-width="1.5"></path>
-<path class="opacity-80" d="M100 30 Q120 80 160 90 Q120 100 100 150 Q80 100 40 90 Q80 80 100 30" fill="none" stroke="#e879f9" stroke-width="2"></path>
-</svg>
-</div>
-<div class="text-center md:text-left">
-<h2 class="text-lg md:text-xl font-display font-bold text-primary tracking-[0.2em] mb-2 uppercase drop-shadow-md">
-                        IIT Tirupati's
-                    </h2>
-<h1 class="text-6xl md:text-8xl lg:text-9xl font-display font-black tracking-tighter mb-4 leading-none select-none">
-<span class="glitch-text block md:inline-block" data-text="E-SUMMIT">E-SUMMIT</span><span class="text-lavender">'26</span>
+<div class="relative min-h-screen pt-24 pb-20 overflow-hidden">
+<div class="absolute inset-0 bg-grid pointer-events-none opacity-30 fixed"></div>
+<div class="absolute inset-0 bg-hero-gradient pointer-events-none fixed"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-20 animate-float">
+<h2 class="text-sm md:text-base font-display font-bold text-primary tracking-[0.3em] mb-4 uppercase drop-shadow-md">IIT Tirupati Present's</h2>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-black mb-6 leading-tight">
+<span class="text-white">ABOUT</span><br class="md:hidden"/>
+<span class="glitch-text" data-text="E-SUMMIT">E-SUMMIT</span> <span class="text-lavender">'26</span>
 </h1>
-<p class="text-2xl md:text-3xl lg:text-4xl font-display font-medium text-gray-200 mt-4 tracking-wide relative inline-block">
-<span class="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary animate-pulse">Architecting Impact</span>
-<span class="absolute inset-0 blur-md bg-gradient-to-r from-primary via-accent to-secondary opacity-30"></span>
-</p>
-<div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-<a class="px-8 py-4 bg-primary text-white font-bold rounded-lg shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] hover:scale-105 transition-all duration-300 font-display uppercase tracking-widest text-sm border border-primary" href="#">
-                            Get Tickets
-                        </a>
-<a class="px-8 py-4 bg-transparent border border-gray-600 text-white font-bold rounded-lg hover:bg-gray-800 transition-all duration-300 font-display uppercase tracking-widest text-sm" href="#">
-                            Learn More
-                        </a>
+<div class="h-1 w-32 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full mt-6 shadow-[0_0_15px_rgba(168,85,247,0.8)]"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-8 lg:gap-12 mb-20">
+<div class="bg-surface-card border border-gray-800 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 group">
+<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h2 class="text-2xl font-display font-bold text-white mb-4">What is E-Summit?</h2>
+<p class="text-gray-300 leading-relaxed">
+                    E-Summit ’26 is the annual flagship entrepreneurship conclave of IIT Tirupati. It is a convergence of visionary minds, industry leaders, and aspiring change-makers. The summit serves as a dynamic platform where innovation meets opportunity, designed to ignite the entrepreneurial spirit in students and professionals alike.
+                </p>
+</div>
+<div class="bg-surface-card border border-gray-800 p-8 rounded-2xl hover:border-secondary/50 transition-all duration-300 group">
+<div class="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
+<svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h2 class="text-2xl font-display font-bold text-white mb-4">Our Objective</h2>
+<p class="text-gray-300 leading-relaxed">
+                    Our core objective is to <span class="text-lavender font-semibold">Architect Impact</span>. We aim to bridge the gap between ideation and execution by providing a robust ecosystem of mentorship, funding, and networking. E-Summit strives to cultivate a culture where disruptive ideas are nurtured into sustainable ventures that solve real-world problems.
+                </p>
+</div>
+</div>
+<div class="mb-20">
+<h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-10 text-center">Why Attend E-Summit?</h2>
+<div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+<div class="p-6 rounded-xl bg-black border border-gray-800 hover:border-primary transition-colors flex flex-col h-full">
+<h3 class="text-xl font-display font-bold text-lavender mb-3">Network</h3>
+<p class="text-gray-400 text-sm flex-grow">Connect with a diverse community of over 500+ attendees, including venture capitalists, angel investors, successful founders, and like-minded peers.</p>
+</div>
+<div class="p-6 rounded-xl bg-black border border-gray-800 hover:border-primary transition-colors flex flex-col h-full">
+<h3 class="text-xl font-display font-bold text-lavender mb-3">Learn</h3>
+<p class="text-gray-400 text-sm flex-grow">Gain actionable insights through masterclasses, fireside chats, and workshops led by industry pioneers who have scaled from zero to one.</p>
+</div>
+<div class="p-6 rounded-xl bg-black border border-gray-800 hover:border-primary transition-colors flex flex-col h-full">
+<h3 class="text-xl font-display font-bold text-lavender mb-3">Transform</h3>
+<p class="text-gray-400 text-sm flex-grow">Validate your startup ideas, find potential co-founders, and pitch to investors ready to fund the next big thing.</p>
 </div>
 </div>
 </div>
-<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-<svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<div class="grid lg:grid-cols-12 gap-12 mb-24">
+<div class="lg:col-span-7 bg-surface-card/50 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl">
+<h2 class="text-2xl md:text-3xl font-display font-bold text-white mb-8 border-b border-gray-700 pb-4 inline-block">What You’ll Experience</h2>
+<div class="grid sm:grid-cols-2 gap-6">
+<ul class="custom-list space-y-4 text-gray-300">
+<li><strong>Keynote Sessions</strong> from global leaders</li>
+<li><strong>Startup Expo</strong> showcasing innovation</li>
+<li><strong>Pitch Competitions</strong> with live funding</li>
+</ul>
+<ul class="custom-list space-y-4 text-gray-300">
+<li><strong>Interactive Workshops</strong> on latest tech</li>
+<li><strong>Panel Discussions</strong> on market trends</li>
+<li><strong>Networking Dinners</strong> with investors</li>
+</ul>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center">
+<h2 class="text-2xl md:text-3xl font-display font-bold text-white mb-8">Who Is It For?</h2>
+<div class="flex flex-wrap gap-3">
+<span class="px-5 py-2.5 bg-surface-card border border-primary/40 rounded-full text-lavender font-display text-sm tracking-wide hover:bg-primary/20 transition-colors cursor-default">Student Entrepreneurs</span>
+<span class="px-5 py-2.5 bg-surface-card border border-secondary/40 rounded-full text-secondary font-display text-sm tracking-wide hover:bg-secondary/20 transition-colors cursor-default">Early-stage Startups</span>
+<span class="px-5 py-2.5 bg-surface-card border border-accent/40 rounded-full text-accent font-display text-sm tracking-wide hover:bg-accent/20 transition-colors cursor-default">Investors &amp; VCs</span>
+<span class="px-5 py-2.5 bg-surface-card border border-white/20 rounded-full text-white font-display text-sm tracking-wide hover:bg-white/10 transition-colors cursor-default">Tech Enthusiasts</span>
+<span class="px-5 py-2.5 bg-surface-card border border-primary/40 rounded-full text-lavender font-display text-sm tracking-wide hover:bg-primary/20 transition-colors cursor-default">Corporate Innovators</span>
+<span class="px-5 py-2.5 bg-surface-card border border-secondary/40 rounded-full text-secondary font-display text-sm tracking-wide hover:bg-secondary/20 transition-colors cursor-default">Researchers</span>
+</div>
+</div>
+</div>
+<div class="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-gray-800">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-black to-secondary/10"></div>
+<div class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<pattern height="20" id="dotPattern" patternUnits="userSpaceOnUse" width="20" x="0" y="0">
+<circle cx="2" cy="2" fill="#A855F7" r="1"></circle>
+</pattern>
+<rect fill="url(#dotPattern)" height="100%" width="100%"></rect>
 </svg>
 </div>
-</div>
-</main>
-<section class="py-20 bg-black relative z-20">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Why Attend?</h2>
-<div class="h-1 w-20 bg-primary mx-auto rounded"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="p-8 rounded-2xl bg-surface-card border border-gray-800 hover:border-primary/50 transition-colors group">
-<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
-<h3 class="text-xl font-bold text-white mb-2 font-display">Innovation</h3>
-<p class="text-gray-400">Experience cutting-edge technology and innovative ideas from across the nation.</p>
-</div>
-<div class="p-8 rounded-2xl bg-surface-card border border-gray-800 hover:border-primary/50 transition-colors group">
-<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
-<h3 class="text-xl font-bold text-white mb-2 font-display">Networking</h3>
-<p class="text-gray-400">Connect with industry leaders, entrepreneurs, and like-minded students.</p>
-</div>
-<div class="p-8 rounded-2xl bg-surface-card border border-gray-800 hover:border-primary/50 transition-colors group">
-<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
-<h3 class="text-xl font-bold text-white mb-2 font-display">Workshops</h3>
-<p class="text-gray-400">Gain hands-on experience through expert-led workshops and bootcamps.</p>
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 tracking-tight">Be a Part of E-Summit ’26</h2>
+<p class="text-gray-300 max-w-2xl mx-auto mb-10 text-lg">
+                    Join us in architecting the future. Whether you have an idea that can change the world or simply the curiosity to learn how, your journey starts here.
+                </p>
+<a class="inline-block px-10 py-4 bg-primary text-white font-bold rounded-lg hover:bg-purple-600 transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] hover:-translate-y-1 font-display uppercase tracking-widest text-sm" href="#">
+                    Register Now
+                </a>
 </div>
 </div>
 </div>
-</section>
+</div>
 <footer class="bg-black border-t border-gray-800 pt-12 pb-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex flex-col md:flex-row justify-between items-center">
