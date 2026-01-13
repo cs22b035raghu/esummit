@@ -33,9 +33,14 @@ router.get("/contact", (req, res) => {
   sendPage(res, "contact.html");
 });
 
+router.get("/Hackathons",(req,res)=>{
+  sendPage(res,"hackathon.html");
+});
+
 // 404 fallback
 router.use((req, res) => {
   res.status(404).send("<h1>404 | Page Not Found</h1>");
 });
+
 
 module.exports = router;

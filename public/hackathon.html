@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Idea Sprint - E-Summit '26 | IIT Tirupati</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&amp;family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --primary: #9333EA;
+                --lavender: #a855f7;
+                --lavender-dark: #7e22ce;
+                --black: #000000;
+                --surface-card: #0A0A0A;
+            }
+        }
+        .glitch-text {
+            position: relative;
+            color: var(--lavender);
+            z-index: 1;
+        }
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent; 
+            z-index: -1;
+        }
+        .glitch-text::before {
+            left: -2px;
+            text-shadow: 2px 0 #00ffff; 
+            animation: glitch-anim-1 2s infinite linear alternate-reverse;
+        }
+        .glitch-text::after {
+            left: 2px;
+            text-shadow: -2px 0 #ff00ff;
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim-1 {
+            0% { clip-path: inset(20% 0 80% 0); }
+            20% { clip-path: inset(60% 0 10% 0); }
+            40% { clip-path: inset(40% 0 50% 0); }
+            60% { clip-path: inset(80% 0 5% 0); }
+            80% { clip-path: inset(10% 0 60% 0); }
+            100% { clip-path: inset(30% 0 30% 0); }
+        }
+        @keyframes glitch-anim-2 {
+            0% { clip-path: inset(10% 0 60% 0); }
+            20% { clip-path: inset(80% 0 5% 0); }
+            40% { clip-path: inset(30% 0 20% 0); }
+            60% { clip-path: inset(10% 0 80% 0); }
+            80% { clip-path: inset(50% 0 40% 0); }
+            100% { clip-path: inset(0% 0 10% 0); }
+        }
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#9333EA",
+                        lavender: "#a855f7",
+                        surface: "#0A0A0A",
+                    },
+                    fontFamily: {
+                        display: ["Orbitron", "sans-serif"],
+                        body: ["Montserrat", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-black text-gray-200 font-body">
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-2">
+<svg class="w-8 h-8 text-lavender" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 100 100">
+<path d="M50 20 L60 45 L85 45 L65 60 L75 85 L50 70 L25 85 L35 60 L15 45 L40 45 Z" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+<span class="font-display font-bold text-xl tracking-wider text-white">E-SUMMIT<span class="text-lavender">'26</span></span>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-8">
+<a class="text-gray-300 hover:text-lavender px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/">Home</a>
+<a class="text-gray-300 hover:text-lavender px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/about">About</a>
+<a class="text-gray-300 hover:text-lavender px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/">Speakers</a>
+<a class="text-gray-300 hover:text-lavender px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/events">Events</a>
+<a class="text-gray-300 hover:text-lavender px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/contact">Contact</a>
+<a class="text-gray-300 hover:text-lavender px-3 py-2 rounded-md text-sm font-medium transition-colors" href="/Hackathons">Hackathons</a>
+</div>
+</div>
+<div>
+<a class="bg-lavender hover:bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all transform hover:scale-105" href="#">
+                        Register Now
+                    </a>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
+<div class="absolute inset-0 bg-grid opacity-20"></div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
+<g class="text-lavender" stroke="currentColor" stroke-width="0.5">
+<line x1="5%" x2="25%" y1="15%" y2="35%"></line>
+<line x1="25%" x2="15%" y1="35%" y2="65%"></line>
+<line x1="15%" x2="45%" y1="65%" y2="75%"></line>
+<line x1="65%" x2="75%" y1="15%" y2="45%"></line>
+<line x1="75%" x2="55%" y1="45%" y2="55%"></line>
+<circle cx="5%" cy="15%" fill="currentColor" r="2"></circle>
+<circle cx="25%" cy="35%" fill="currentColor" r="2"></circle>
+<circle cx="45%" cy="75%" fill="currentColor" r="2"></circle>
+<circle cx="65%" cy="15%" fill="currentColor" r="2"></circle>
+<circle cx="75%" cy="45%" fill="currentColor" r="2"></circle>
+</g>
+</svg>
+<div class="relative z-10 text-center max-w-4xl px-4">
+<h2 class="text-primary font-display tracking-[0.3em] uppercase mb-4 text-sm md:text-base font-bold">Flagship Event of E-Summit 2026</h2>
+<h1 class="text-5xl md:text-8xl font-display font-black mb-6 leading-none tracking-tight">
+<span class="glitch-text block" data-text="IDEA SPRINT">IDEA SPRINT</span>
+</h1>
+<p class="text-lg md:text-xl text-gray-300 font-medium mb-10 tracking-wide max-w-2xl mx-auto">
+                National Innovation Challenge | Architecting the Future through Code and Creativity
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="bg-lavender text-white px-10 py-4 rounded-lg font-display font-bold text-sm tracking-widest uppercase shadow-[0_0_25px_rgba(168,85,247,0.5)] hover:shadow-[0_0_40px_rgba(168,85,247,0.7)] hover:bg-purple-600 transition-all transform hover:-translate-y-1" href="https://unstop.com/p/iit-tirupati-nif-hackathon-indian-institute-of-technology-iit-tirupati-1620708">
+                    Register Now
+                </a>
+
+</div>
+</div>
+</header>
+<section class="py-24 bg-black relative border-y border-gray-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface border border-gray-800 p-8 rounded-2xl hover:border-lavender/50 transition-colors group">
+<span class="material-symbols-outlined text-lavender text-4xl mb-4 group-hover:scale-110 transition-transform">location_on</span>
+<h3 class="text-white font-display font-bold text-lg mb-2">National Challenge</h3>
+<p class="text-gray-400 text-sm">Organized at the prestigious IIT Tirupati campus for innovators across India.</p>
+</div>
+<div class="bg-surface border border-gray-800 p-8 rounded-2xl hover:border-lavender/50 transition-colors group">
+<span class="material-symbols-outlined text-lavender text-4xl mb-4 group-hover:scale-110 transition-transform">school</span>
+<h3 class="text-white font-display font-bold text-lg mb-2">Open Eligibility</h3>
+<p class="text-gray-400 text-sm">Open to all UG &amp; PG students from all academic disciplines.</p>
+</div>
+<div class="bg-surface border border-gray-800 p-8 rounded-2xl hover:border-lavender/50 transition-colors group">
+<span class="material-symbols-outlined text-lavender text-4xl mb-4 group-hover:scale-110 transition-transform">groups</span>
+<h3 class="text-white font-display font-bold text-lg mb-2">Team Size</h3>
+<p class="text-gray-400 text-sm">Collaborate in teams of 2–4 members to bring your ideas to life.</p>
+</div>
+<div class="bg-surface border border-gray-800 p-8 rounded-2xl hover:border-lavender/50 transition-colors group">
+<span class="material-symbols-outlined text-lavender text-4xl mb-4 group-hover:scale-110 transition-transform">workspace_premium</span>
+<h3 class="text-white font-display font-bold text-lg mb-2">Rewards</h3>
+<p class="text-gray-400 text-sm">Prizes worth ₹50,000 + Exclusive PPO opportunities for top performers.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-black relative" id="format">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-display font-black text-white mb-4 uppercase tracking-tight">Competition <span class="text-lavender">Format</span></h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-stretch">
+<div class="flex-1 bg-surface border border-gray-800 p-10 rounded-3xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 font-display font-black text-gray-800 text-6xl opacity-20">01</div>
+<h3 class="text-2xl font-display font-bold text-lavender mb-6 uppercase">Preliminary Round</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">online_prediction</span>
+<div>
+<h4 class="text-white font-bold mb-1 uppercase tracking-wider text-sm">Mode: Online</h4>
+<p class="text-gray-400">Accessible from anywhere across the nation.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">quiz</span>
+<div>
+<h4 class="text-white font-bold mb-1 uppercase tracking-wider text-sm">Assessment</h4>
+<p class="text-gray-400">A rigorous combination of MCQ-based technical screening and DSA Challenges.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 bg-lavender/10 border border-lavender/30 p-10 rounded-3xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 font-display font-black text-lavender text-6xl opacity-10">02</div>
+<h3 class="text-2xl font-display font-bold text-white mb-6 uppercase">Final Round</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-lavender">apartment</span>
+<div>
+<h4 class="text-white font-bold mb-1 uppercase tracking-wider text-sm">Mode: Offline</h4>
+<p class="text-gray-400">Experience the vibrant ecosystem of IIT Tirupati Campus.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-lavender">code_blocks</span>
+<div>
+<h4 class="text-white font-bold mb-1 uppercase tracking-wider text-sm">Grand Finale</h4>
+<p class="text-gray-400">24-hour non-stop building, pitching, and evaluation by industry experts.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-black relative">
+<div class="absolute inset-0 bg-grid opacity-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-display font-black text-white mb-4 uppercase tracking-tight">Why <span class="text-lavender">Join?</span></h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center space-y-4">
+<div class="w-16 h-16 bg-lavender/10 border border-lavender/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-lavender text-3xl">terminal</span>
+</div>
+<h3 class="text-xl font-display font-bold text-white uppercase tracking-wider">Industry Problems</h3>
+<p class="text-gray-400 leading-relaxed">Work on industry-relevant real-world problem statements curated by our corporate partners.</p>
+</div>
+<div class="text-center space-y-4">
+<div class="w-16 h-16 bg-lavender/10 border border-lavender/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-lavender text-3xl">rocket_launch</span>
+</div>
+<h3 class="text-xl font-display font-bold text-white uppercase tracking-wider">Startup Ecosystem</h3>
+<p class="text-gray-400 leading-relaxed">Gain unique exposure to IIT Tirupati’s thriving startup culture and incubation facilities.</p>
+</div>
+<div class="text-center space-y-4">
+<div class="w-16 h-16 bg-lavender/10 border border-lavender/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-lavender text-3xl">hub</span>
+</div>
+<h3 class="text-xl font-display font-bold text-white uppercase tracking-wider">Elite Networking</h3>
+<p class="text-gray-400 leading-relaxed">Network with top-tier innovators, successful founders, and experienced mentors from the tech world.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-lavender relative overflow-hidden">
+<div class="absolute inset-0 bg-black/15"></div>
+<div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+<h2 class="text-white text-3xl md:text-5xl font-display font-black mb-6 uppercase">Ready to Innovate?</h2>
+<p class="text-white/90 text-lg mb-10 font-medium max-w-2xl mx-auto">Don't miss the chance to showcase your talent at India's premier technical innovation challenge.</p>
+<a class="inline-block bg-black text-white px-12 py-5 rounded-lg font-display font-bold text-sm tracking-widest uppercase hover:bg-gray-900 transition-all shadow-xl" href="https://unstop.com/p/iit-tirupati-nif-hackathon-indian-institute-of-technology-iit-tirupati-1620708">
+                Secure Your Spot Now
+            </a>
+</div>
+</section>
+<footer class="bg-black border-t border-gray-900 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center mb-12">
+<div class="mb-8 md:mb-0">
+<div class="flex items-center space-x-2 mb-4">
+<svg class="w-8 h-8 text-lavender" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 100 100">
+<path d="M50 20 L60 45 L85 45 L65 60 L75 85 L50 70 L25 85 L35 60 L15 45 L40 45 Z" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+<span class="font-display font-bold text-2xl tracking-wider text-white">E-SUMMIT<span class="text-lavender">'26</span></span>
+</div>
+<p class="text-gray-500 max-w-xs">National Innovation Challenge at IIT Tirupati. Empowering the next generation of entrepreneurs.</p>
+</div>
+<div class="flex space-x-8">
+<a class="text-gray-400 hover:text-lavender transition-colors" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="text-gray-400 hover:text-lavender transition-colors" href="#">
+<span class="sr-only">Twitter</span>
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+<a class="text-gray-400 hover:text-lavender transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div class="border-t border-gray-900 pt-8 text-center text-sm text-gray-600">
+                © 2026 IIT Tirupati E-Summit. Developed by the Entrepreneurship Cell.
+            </div>
+</div>
+</footer>
+
+</body></html>
